@@ -41,6 +41,12 @@ def latexUnitMultiple(valueString):
     if valueString[-1] == 'p':
         return valueString.replace('p', r'\si\pico')
 
+    if valueString[-1] == 'f':
+        return valueString.replace('f', r'\si\femto')
+
+    if valueString[-1] == 'a':
+        return valueString.replace('f', r'\si\atto')
+
     return valueString
 
 

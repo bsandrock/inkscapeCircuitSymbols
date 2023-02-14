@@ -64,7 +64,7 @@
                 </vbox>
             </hbox>
             <spacer size="expand"/>
-            <label>² Multipliers: M, k, m, u, n, p</label>
+            <label>² Multipliers: M, k, m, u, n, p, f, a</label>
         </page>
         <page name="Sources" appearance="minimal" gui-text="Sources">
             <param name="subTab_sources" type="notebook">
@@ -167,7 +167,7 @@
                 </vbox>
             </hbox>
             <spacer size="expand"/>
-            <label>² Multipliers: M, k, m, u, n, p</label>
+            <label>² Multipliers: M, k, m, u, n, p, f, a</label>
         </page>
         <page name="Switches" appearance="minimal" gui-text="Switches">
             <hbox>
@@ -402,7 +402,7 @@
                         <param name="colorPickerVolt" type="color" appearance="colorbutton" gui-text=" "/>
                     </hbox>
                     <spacer/>
-                    <label>² Multipliers: M, k, m, u, n, p</label>
+                    <label>² Multipliers: M, k, m, u, n, p, f, a</label>
                     <label>³ Voltage: invert curvature. Current: text side</label>
                 </page>
             </param>

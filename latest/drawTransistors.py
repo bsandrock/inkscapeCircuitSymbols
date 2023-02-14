@@ -51,7 +51,7 @@ class transistor(inkBase.inkscapeMadeEasy):
         colorBlack = inkDraw.color.defined('black')
 
         if not flagPhototransistor:
-            inkDraw.line.relCoords(elem, [[28 + wireExtraSize, 0]], self.add(position, [- 10 - wireExtraSize, 0]))  # base
+            inkDraw.line.relCoords(elem, [[8 + wireExtraSize, 0]], self.add(position, [10 - wireExtraSize, 0]))  # base
         else:  # light arrows
             arrow = self.createGroup(elem)
             inkDraw.line.relCoords(arrow, [[7, 0]], position)
@@ -72,13 +72,13 @@ class transistor(inkBase.inkscapeMadeEasy):
 
         # draw emitter and collector terminals
         # collector
-        inkDraw.line.relCoords(elem, [[7, -Yfactor * 5], [0, -Yfactor * (17 + wireExtraSize)]], self.add(position, [18, - Yfactor * 3]))
+        inkDraw.line.relCoords(elem, [[7, -Yfactor * 5], [0, -Yfactor * (7 + wireExtraSize)]], self.add(position, [18, - Yfactor * 3]))
         if isNPN:
             inkDraw.line.relCoords(elem, [[7, Yfactor * 5]], self.add(position, [18, Yfactor * 3]), lineStyle=lineStyleArrow)  # emitter arrow
-            inkDraw.line.relCoords(elem, [[0, Yfactor * (17 + wireExtraSize)]], self.add(position, [25, Yfactor * 8]))  # emitter
+            inkDraw.line.relCoords(elem, [[0, Yfactor * (7 + wireExtraSize)]], self.add(position, [25, Yfactor * 8]))  # emitter
         else:
             inkDraw.line.relCoords(elem, [[-7, -Yfactor * 5]], self.add(position, [25, Yfactor * 8]), lineStyle=lineStyleArrow)  # emitter arrow
-            inkDraw.line.relCoords(elem, [[0, Yfactor * (17 + wireExtraSize)]], self.add(position, [25, Yfactor * 8]))  # emitter
+            inkDraw.line.relCoords(elem, [[0, Yfactor * (7 + wireExtraSize)]], self.add(position, [25, Yfactor * 8]))  # emitter
 
         if drawEnvelope:
             inkDraw.circle.centerRadius(elem, centerPoint=self.add(position, [22, 0]), radius=10, offset=[0, 0], label='circle')

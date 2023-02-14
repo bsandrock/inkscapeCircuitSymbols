@@ -37,12 +37,12 @@ class RLC(inkBase.inkscapeMadeEasy):
 
         if standard == 'IEEE':
             inkDraw.line.relCoords(elem,
-                               [[15.5 + wireExtraSize, 0], [2, 3], [3, -6], [3, 6], [3, -6], [3, 6], [3, -6], [2, 3], [15.5 + wireExtraSize, 0]],
-                               self.add(position, [-25 - wireExtraSize, 0]))
+                               [[5.5 + wireExtraSize, 0], [2, 3], [3, -6], [3, 6], [3, -6], [3, 6], [3, -6], [2, 3], [5.5 + wireExtraSize, 0]],
+                               self.add(position, [-15 - wireExtraSize, 0]))
         if standard == 'IEC':
-            inkDraw.line.relCoords(elem, [[-(15.5 + wireExtraSize), 0]], self.add(position, [-9.5, 0]))
+            inkDraw.line.relCoords(elem, [[-(5.5 + wireExtraSize), 0]], self.add(position, [-9.5, 0]))
             inkDraw.line.relCoords(elem, [[19, 0], [0, -6], [-19, 0], [0, 6]], self.add(position, [-9.5, 3]))
-            inkDraw.line.relCoords(elem, [[15.5 + wireExtraSize, 0]], self.add(position, [9.5, 0]))
+            inkDraw.line.relCoords(elem, [[5.5 + wireExtraSize, 0]], self.add(position, [9.5, 0]))
 
         if flagVariable:
             # build arrow marker
@@ -194,17 +194,17 @@ class RLC(inkBase.inkscapeMadeEasy):
         elem = self.createGroup(group)
 
         #terminals
-        inkDraw.line.relCoords(elem, [[23 + wireExtraSize, 0]], self.add(position, [2, 0]))
+        inkDraw.line.relCoords(elem, [[13 + wireExtraSize, 0]], self.add(position, [2, 0]))
         #capacitor plates
         inkDraw.line.relCoords(elem, [[0, -14]], self.add(position, [2, 7]))
         if standard == 'IEC':
             #terminals
-            inkDraw.line.relCoords(elem, [[-(23 + wireExtraSize), 0]], self.add(position, [-2, 0]))
+            inkDraw.line.relCoords(elem, [[-(13 + wireExtraSize), 0]], self.add(position, [-2, 0]))
             #capacitor plates
             inkDraw.line.relCoords(elem, [[0, -14]], self.add(position, [-2, 7]))
         if standard == 'IEEE':
             #terminals
-            inkDraw.line.relCoords(elem, [[-(23 + wireExtraSize), 0]], self.add(position, [-1, 0]))
+            inkDraw.line.relCoords(elem, [[-(13 + wireExtraSize), 0]], self.add(position, [-1, 0]))
             #capacitor plates
             inkDraw.arc.threePoints(group, [0,7],[2,0],[0,-7], self.add(position, [-3, 0]))
 
@@ -270,8 +270,8 @@ class RLC(inkBase.inkscapeMadeEasy):
         group = self.createGroup(parent, label)
         elem = self.createGroup(group)
 
-        inkDraw.line.relCoords(elem, [[-(13 + wireExtraSize), 0]], self.add(position, [-12, 0]))
-        inkDraw.line.relCoords(elem, [[13 + wireExtraSize, 0]], self.add(position, [12, 0]))
+        inkDraw.line.relCoords(elem, [[-(3 + wireExtraSize), 0]], self.add(position, [-12, 0]))
+        inkDraw.line.relCoords(elem, [[3 + wireExtraSize, 0]], self.add(position, [12, 0]))
 
         inkDraw.arc.centerAngStartAngEnd(elem, self.add(position, [-9, 0]), 3.0, 0.0, 180.0, [0, 0], largeArc=False)
         inkDraw.arc.centerAngStartAngEnd(elem, self.add(position, [-3, 0]), 3.0, 0.0, 180.0, [0, 0], largeArc=False)
@@ -349,10 +349,10 @@ class RLC(inkBase.inkscapeMadeEasy):
         elem = self.createGroup(group)
 
         if standard == 'IEEE':
-            inkDraw.line.relCoords(elem, [[-(15.5 + wireExtraSize), 0]], self.add(position, [-9.5, 0]))
+            inkDraw.line.relCoords(elem, [[-(5.5 + wireExtraSize), 0]], self.add(position, [-9.5, 0]))
             inkDraw.arc.threePoints(elem, [-9.5, 0], [-4.75, -3], [0,0], offset=position)
             inkDraw.arc.threePoints(elem, [9.5, 0], [4.75, 3], [0,0], offset=position)
-            inkDraw.line.relCoords(elem, [[15.5 + wireExtraSize, 0]], self.add(position, [9.5, 0]))
+            inkDraw.line.relCoords(elem, [[5.5 + wireExtraSize, 0]], self.add(position, [9.5, 0]))
             inkDraw.circle.centerRadius(elem, [-9.5, 0], 1.2, offset=position, lineStyle=lineStyleSign)
             inkDraw.circle.centerRadius(elem, [9.5, 0], 1.2, offset=position, lineStyle=lineStyleSign)
 
